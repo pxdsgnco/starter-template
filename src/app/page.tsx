@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
@@ -16,11 +17,11 @@ export default function Home() {
 
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-8">
-          <Button size="lg" className="text-lg">
-            Sign Up
+          <Button size="lg" className="text-lg" asChild>
+            <Link href="/sign-up">Sign Up</Link>
           </Button>
-          <Button size="lg" variant="outline" className="text-lg">
-            Login
+          <Button size="lg" variant="outline" className="text-lg" asChild>
+            <Link href="/login">Login</Link>
           </Button>
         </div>
       </main>
